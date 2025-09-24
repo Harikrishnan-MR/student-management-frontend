@@ -3,15 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh; /* Full viewport height */
+  min-height: 65vh; /* Full viewport height */
   background-color: #f4f4f4; /* Light background */
+  padding: 20px; /* Add padding for small screens */
 }
 
 /* Register Container */
 .register-container {
+  width: 100%;
   max-width: 400px;
   background: white;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 8px;
@@ -21,9 +23,11 @@
 .register-container input {
   width: 100%;
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 /* Register Button */
@@ -32,9 +36,11 @@
   background: #007bff;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
 .register-container button:hover {
@@ -43,5 +49,23 @@
 
 /* Login Link */
 .register-container p {
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-container input,
+  .register-container button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .register-container p {
+    font-size: 13px;
+  }
 }

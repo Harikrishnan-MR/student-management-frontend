@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { resetPassword } from "../services/api";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import "../styles/Footer.css";  
 
 const ResetPassword = () => {
   const [user, setUser] = useState({ username: "", newPassword: "" });
@@ -23,6 +25,7 @@ const ResetPassword = () => {
   };
 
   return (
+    <>
     <div>
       <h2>Reset Password</h2>
       {message && <p>{message}</p>}
@@ -32,6 +35,8 @@ const ResetPassword = () => {
         <button type="submit">Reset</button>
       </form>
     </div>
+    <Footer />
+    </>
   );
 };
 

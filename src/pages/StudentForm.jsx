@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import api from "../services/api"; // ✅ Import default Axios instance
+import api from "../services/api"; 
+import Footer from "../components/Footer";
+import "../styles/Footer.css";  
+ 
+
 
 const StudentForm = () => {
   const [student, setStudent] = useState({
@@ -13,7 +17,6 @@ const StudentForm = () => {
     firstname: "",
     gender: "",
     mother_name: "",
-    photo: null,
     sem1: "",
     sem2: "",
     sem3: "",
@@ -63,6 +66,7 @@ const StudentForm = () => {
   };
 
   return (
+    <>
     <div>
       <h2>{id ? "Edit Student" : "Add Student"}</h2>
       <form onSubmit={handleSubmit}>
@@ -137,6 +141,8 @@ const StudentForm = () => {
         <button type="submit">{id ? "Update" : "Add"} Student</button>
       </form>
     </div>
+    <Footer />
+    </>
   );
 };
 

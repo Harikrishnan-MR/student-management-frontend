@@ -1,20 +1,28 @@
 /* ✅ Style the Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;  /* Spread elements horizontally */
+  justify-content: space-between; /* Spread elements horizontally */
   align-items: center;
   padding: 15px 20px;
   background-color: #212a34; /* Blue background */
   color: white;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* ✅ Navbar Brand / Logo */
+.navbar .brand {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* ✅ Style the Navbar UL (List) */
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;  /* Space between items */
+  gap: 20px; /* Space between items */
   padding: 0;
   margin: 0;
+  flex-wrap: wrap; /* Wrap items on small screens */
 }
 
 /* ✅ Style List Items */
@@ -48,4 +56,25 @@
 
 .navbar button:hover {
   background: #a71d2a; /* Darker red on hover */
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack brand and links vertically */
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack nav links vertically */
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar button {
+    width: 100%; /* Full-width button on mobile */
+    margin-top: 10px;
+  }
 }

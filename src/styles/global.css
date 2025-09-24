@@ -4,24 +4,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background-color: #f4f4f4;
     color: #333;
-  }
-  
-  .container {
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
     max-width: 600px;
     margin: 50px auto;
     background: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  
-  h2 {
+    border-radius: 8px; /* smoother corners */
+}
+
+/* Headings */
+h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        margin: 20px;      /* reduce margins on mobile */
+        padding: 15px;     /* reduce padding */
+    }
+
+    h2 {
+        font-size: 20px;   /* smaller headings */
+    }
+}

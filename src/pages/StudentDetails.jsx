@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 import { getStudentById } from "../services/api";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import Footer from "../components/Footer";
+import "../styles/Footer.css";  
+
+
 
 const StudentDetail = () => {
   const { id } = useParams();
@@ -38,6 +42,7 @@ const StudentDetail = () => {
   };
 
   return (
+    <>
     <div className="student-detail-container">
       <h2>Student Details</h2>
       {student ? (
@@ -76,6 +81,8 @@ const StudentDetail = () => {
         <button onClick={() => window.print()}>🖨 Print</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

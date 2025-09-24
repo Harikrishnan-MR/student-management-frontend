@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { getStudents, deleteStudent } from "../services/api";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../components/Footer";
+import "../styles/Footer.css";
 const Students = () => {
   const [students, setStudents] = useState([]);
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const Students = () => {
   };
 
   return (
+    <>
     <div className="students-container">
       <h2>Student List</h2>
       <button className="add-student-btn" onClick={() => navigate("/students/add")}>➕ Add Student</button>
@@ -51,6 +53,8 @@ const Students = () => {
         </table>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 export default Students;

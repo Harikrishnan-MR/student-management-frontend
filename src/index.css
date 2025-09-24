@@ -5,8 +5,55 @@
   box-sizing: border-box;
 }
 
-/* Apply a basic font */
+/* Apply a basic font and body styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh; /* Ensure full viewport height */
+  line-height: 1.5;
+}
+
+/* Global link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Global container class for centering content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Headings default styling */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs default spacing */
+p {
+  margin-bottom: 15px;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
 }

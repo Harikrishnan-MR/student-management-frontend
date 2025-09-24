@@ -1,3 +1,4 @@
+/* Container styling */
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -5,19 +6,47 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .login-container input {
+    border-radius: 8px; /* smooth corners */
+}
+
+/* Input fields */
+.login-container input {
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
-  }
-  
-  .login-container button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button styling */
+.login-container button {
     width: 100%;
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-  }
-  
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .login-container input,
+    .login-container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

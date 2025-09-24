@@ -1,36 +1,60 @@
 .student-form-container {
+    width: 100%;
     max-width: 500px;
-    margin: auto;
+    margin: 40px auto;
     background: white;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  form {
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Form layout */
+form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  
-  label {
+    gap: 12px;
+}
+
+/* Labels */
+label {
     font-weight: bold;
-  }
-  
-  input, select, button {
-    padding: 10px;
+}
+
+/* Inputs, Selects, Buttons */
+input,
+select,
+button {
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  button {
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
     background: #007bff;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  button:hover {
+    transition: background 0.3s;
+}
+
+button:hover {
     background: #0056b3;
-  }
-  
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .student-form-container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    input,
+    select,
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

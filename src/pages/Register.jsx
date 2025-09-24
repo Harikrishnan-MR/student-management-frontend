@@ -2,6 +2,8 @@ import { useState } from "react";
 import { registerUser } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import "../styles/Register.css"; // Import CSS file
+import Footer from "../components/Footer";
+import "../styles/Footer.css";  
 
 const Register = () => {
   const [user, setUser] = useState({ username: "", password: "" });
@@ -24,6 +26,7 @@ const Register = () => {
   };
 
   return (
+    <>
     <div className="register-page">
       <div className="register-container">
         <h2>Register</h2>
@@ -36,6 +39,8 @@ const Register = () => {
         <p>Already have an account? <a href="/">Login</a></p>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -1,39 +1,49 @@
 .students-container {
+  width: 100%;
   max-width: 900px;
-  margin: auto;
-  padding: 20px;
+  margin: 40px auto;
+  padding: 25px;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centers the heading */
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .students-container h2 {
-  text-align: center;
   margin-bottom: 20px;
 }
 
+/* Add Student Button */
 .add-student-btn {
   display: block;
-  margin: 10px auto; /* Centers the button */
-  padding: 10px 15px;
+  margin: 10px auto;
+  padding: 12px 18px;
   font-size: 16px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
+.add-student-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Table Container */
 .students-table-container {
-  display: flex;
-  justify-content: center;
+  overflow-x: auto; /* Enables horizontal scroll on small screens */
+  margin-top: 10px;
 }
 
+/* Students Table */
 .students-table {
-  width: 80%;
+  width: 100%;
+  min-width: 600px; /* Ensures table readability on desktop */
   border-collapse: collapse;
-  margin-top: 10px;
+  margin: auto;
 }
 
 .students-table th,
@@ -48,10 +58,12 @@
   color: white;
 }
 
+/* Student Actions */
 .student-actions {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap; /* Wrap buttons on small screens */
 }
 
 .student-actions button {
@@ -59,6 +71,11 @@
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.student-actions button:hover {
+  opacity: 0.8;
 }
 
 .student-actions .edit {
@@ -69,4 +86,36 @@
 .student-actions .delete {
   background-color: #dc3545;
   color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .students-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .add-student-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .students-table th,
+  .students-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .students-table {
+    min-width: 100%; /* Table fits within screen width */
+  }
+
+  .student-actions button {
+    width: 100%; /* Stack buttons vertically */
+    padding: 10px;
+    font-size: 14px;
+  }
 }

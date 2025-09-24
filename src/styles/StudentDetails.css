@@ -1,43 +1,68 @@
 .student-detail-container {
+    width: 100%;
     max-width: 600px;
-    margin: auto;
+    margin: 40px auto;
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-  }
-  
-  .student-info p {
+    box-sizing: border-box;
+}
+
+/* Student Info */
+.student-info p {
     font-size: 18px;
     margin: 8px 0;
-  }
-  
-  .student-actions {
+}
+
+/* Actions */
+.student-actions {
     margin-top: 20px;
     display: flex;
     gap: 15px;
-  }
-  
-  button {
-    padding: 10px;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+/* Buttons */
+button {
+    padding: 12px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  button:hover {
+    transition: opacity 0.3s;
+}
+
+button:hover {
     opacity: 0.8;
-  }
-  
-  button:first-child {
+}
+
+/* Specific Buttons */
+button:first-child {
     background-color: #28a745;
     color: white;
-  }
-  
-  button:last-child {
+}
+
+button:last-child {
     background-color: #007bff;
     color: white;
-  }
-  
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .student-detail-container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .student-info p {
+        font-size: 16px;
+    }
+
+    .student-actions button {
+        width: 100%; /* Make buttons full width on small screens */
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -2,7 +2,7 @@
 
 .dashboard-container {
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
   padding: 20px;
   background: #ffffff;
   border-radius: 8px;
@@ -10,6 +10,7 @@
   text-align: center;
 }
 
+/* Headings and Text */
 .dashboard-container h2 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -18,23 +19,26 @@
 .dashboard-container p {
   font-size: 18px;
   color: #555;
+  margin-bottom: 20px;
 }
 
 /* Button Wrapper */
 .dashboard-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Adds space between buttons */
+  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
   margin-top: 20px;
 }
 
 /* Individual Buttons */
 .dashboard-buttons button {
-  padding: 10px 15px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  transition: background 0.3s;
 }
 
 .dashboard-buttons .view-students {
@@ -42,12 +46,46 @@
   color: white;
 }
 
+.dashboard-buttons .view-students:hover {
+  background-color: #449d48;
+}
+
 .dashboard-buttons .manage-users {
   background-color: #007bff;
   color: white;
 }
 
+.dashboard-buttons .manage-users:hover {
+  background-color: #0056b3;
+}
+
 .dashboard-buttons .logout {
   background-color: #e74c3c;
   color: white;
+}
+
+.dashboard-buttons .logout:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .dashboard-container h2 {
+    font-size: 20px;
+  }
+
+  .dashboard-container p {
+    font-size: 16px;
+  }
+
+  .dashboard-buttons button {
+    width: 100%; /* Buttons take full width on small screens */
+    font-size: 14px;
+    padding: 10px;
+  }
 }
